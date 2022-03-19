@@ -19,7 +19,11 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 
-const Links = ['Home', 'About', 'Projects'];
+const Links = {
+    home: {title: "Home", link: '#'},
+    about: {title: "About", link: '#about'},
+    projects: {title: "Projects", link: '#projects'}
+}
 
 const NavLink = ({ children }) => (
     <Link
@@ -30,8 +34,8 @@ const NavLink = ({ children }) => (
             textDecoration: 'none',
             bg: useColorModeValue('gray.200', 'gray.700'),
         }}
-        href={'#'}>
-        {children}
+        href={children.link}>
+        {children.title}
     </Link>
 );
 
@@ -57,9 +61,9 @@ export default function Nav() {
                             as={'nav'}
                             spacing={4}
                             display={{ base: 'none', md: 'flex' }}>
-                            {Links.map((link) => (
-                                <NavLink key={link}>{link}</NavLink>
-                            ))}
+                            {Object.entries(Links).map(([link, value]) => {
+                                return (<NavLink key={value.title}>{value}</NavLink>)
+                                })}
                         </HStack>
                     </HStack>
                     <Flex alignItems={'center'} justifyItems={'center'}>
@@ -82,9 +86,9 @@ export default function Nav() {
                 {isOpen ? (
                     <Box pb={4} display={{ md: 'none' }}>
                         <Stack as={'nav'} spacing={4}>
-                            {Links.map((link) => (
-                                <NavLink key={link}>{link}</NavLink>
-                            ))}
+                            {Object.keys(Links).map((link) => {
+                                return (<NavLink key={link}>{link.title}</NavLink>)
+                            })}
                         </Stack>
                     </Box>
                 ) : null}
