@@ -41,7 +41,7 @@ export default function Nav() {
 
     return (
         <>
-            <Box marginX={'auto'} marginY={'1rem'} right={0} left={0} bg={useColorModeValue('gray.100', 'gray.900')} width={'95%'} borderRadius={20} position={'fixed'}
+            <Box boxShadow='sm' marginX={'auto'} marginY={'1rem'} right={0} left={0} bg={useColorModeValue('gray.100', 'gray.900')} width={'95%'} borderRadius={20} position={'fixed'}
 
                  zIndex={5} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
