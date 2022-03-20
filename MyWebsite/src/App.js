@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css'
 import {
     ChakraProvider,
@@ -9,25 +9,39 @@ import {
     Code,
     Grid,
     Flex, Heading,
-    Center, HStack, Button, Icon, Image, Spacer
+    Center, HStack, Button, Icon, Image, Spacer,
+    useColorMode,
+    useColorModeValue,
 } from '@chakra-ui/react';
+// import { useColorMode, useColorModeValue} from '@chakra-ui/color-mode'
 import judy from './img/judy2.png'
 import TrackVisibility from 'react-on-screen';
 import { CircleGrid, Circle } from 'react-awesome-shapes'
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-import theme from './index.js'
+import theme from './theme.js'
 import Nav from "./components/Nav";
 import { Fade, ScaleFade, Slide, SlideFade } from '@chakra-ui/react'
 import {FaGithub, FaLinkedinIn, FaRegEnvelope, FaAngleDown} from 'react-icons/fa';
 
+
 function App() {
+    const [shapeColor, setShapeColor] = useState('#8378e9')
+    const { colorMode, toggleColorMode } = useColorMode();
+    const updateColorMode = (colorMode) => {
+        colorMode === 'light' ? setShapeColor('#8378e9') : setShapeColor('#80233b')
+        console.log('cm', colorMode);
+    }
+
   return (
+
     <ChakraProvider theme={theme}>
-
-
-            <Nav/>
+            <Nav
+                updateColorMode={updateColorMode}
+            />
         <Center h={'100vh'} overflow={'hidden'} width={'100%'}>
-        <Flex borderBottomRightRadius={35} borderBottomLeftRadius={35} align="center" justify="center" w='100%' h='100vh' bgGradient='linear(to-l, #6CD4FF, #8B80F9)'>
+        <Flex borderBottomRightRadius={35} borderBottomLeftRadius={35} align="center" justify="center" w='100%' h='100vh'
+              bgGradient='linear(to-l, #6CD4FF, #8B80F9)'
+        _dark={{bgGradient: 'linear(to-l, #3a6186, #89253e)'}}>
             <ScaleFade in={true} offsetY='40px' style={{ transitionDuration: '1s', width:'40%' }} >
             <VStack position={'relative'} zIndex={2} spacing={8} boxShadow='md' w={'100%'} borderRadius={25} bgColor='white' paddingY={'2rem'}
                     paddingX={'2rem'}
@@ -79,7 +93,7 @@ function App() {
             <CircleGrid
                 position="absolute"
                 left="0px"
-                color="#8378e9"
+                color={shapeColor}
                 size="200px"
                 zIndex={0}
             />
@@ -111,6 +125,7 @@ function App() {
                     boxSize='150px'
                     position={'absolute'}
                     zIndex={0}
+                    _dark={{bgGradient: 'linear(to-l, #3a6186, #89253e)'}}
                 />
                 <Spacer/>
                 <Box marginLeft={10}
@@ -118,8 +133,9 @@ function App() {
                      padding={5}
                      borderRadius={20}
                      bg={'gray.50'}
+                     _dark={{bg: 'gray.900'}}
                      >
-                    <Text  fontFamily={'fontSans'} fontSize={'xl'} _dark={{color: 'black'}}>
+                    <Text  fontFamily={'fontSans'} fontSize={'xl'} >
                         Hey! I'm Judy Naamani, a 3rd year student at the University of Toronto specializing in Computer Science.
                         <br/>
                         I'm interested in web development and UI/UX, and some of my hobbies include graphic design and digital art.
@@ -132,7 +148,6 @@ function App() {
 
         </VStack>
         </Center>
-
     </ChakraProvider>
   );
 }

@@ -5,16 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
-import { extendTheme } from '@chakra-ui/react'
-
-const theme = extendTheme({
-    fonts: {
-        heading: "DM Sans, sans-serif",
-        fontMono: "Source Code Pro",
-        fontSans: "DM Sans, sans-serif"
-    },
-})
-export default theme
 
 ReactDOM.render(
   <StrictMode>

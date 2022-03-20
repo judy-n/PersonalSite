@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import {ReactNode, useEffect} from 'react';
 import {
     Box,
     Flex,
@@ -15,7 +15,7 @@ import {
     useDisclosure,
     useColorModeValue,
     useColorMode,
-    Stack,
+    Stack, color,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 
@@ -39,9 +39,14 @@ const NavLink = ({ children }) => (
     </Link>
 );
 
-export default function Nav() {
+export default function Nav(props) {
     const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onOpen, onClose } = useDisclosure();
+    console.log("nav color mode", colorMode)
+
+    useEffect(() => {
+        props.updateColorMode(colorMode);
+    }, [colorMode])
 
     return (
         <>
