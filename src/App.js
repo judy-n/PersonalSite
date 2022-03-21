@@ -9,7 +9,9 @@ import {
     Code,
     Grid,
     Flex, Heading,
-    Center, HStack, Button, Icon, Image, Spacer,
+    Center, HStack, Button,
+    Icon, Image, Spacer,
+    Badge,
     useColorMode,
     useColorModeValue,
 } from '@chakra-ui/react';
@@ -22,7 +24,7 @@ import theme from './theme.js'
 import Nav from "./components/Nav";
 import { Fade, ScaleFade, Slide, SlideFade } from '@chakra-ui/react'
 import {FaGithub, FaLinkedinIn, FaRegEnvelope, FaAngleDown} from 'react-icons/fa';
-
+import ScrollButton from "./components/ScrollButton";
 
 function App() {
     const [shapeColor, setShapeColor] = useState('#8378e9')
@@ -42,7 +44,7 @@ function App() {
         <Flex borderBottomRightRadius={35} borderBottomLeftRadius={35} align="center" justify="center" w='100%' h='100vh'
               bgGradient='linear(to-l, #6CD4FF, #8B80F9)'
         _dark={{bgGradient: 'linear(to-l, #3a6186, #89253e)'}}>
-            <Box w={['60%','50%','40%']}>
+            <Box w={['80%','60%','50%','40%']}>
             <ScaleFade in={true} offsetY='40px' style={{ transitionDuration: '1s'}}
             >
 
@@ -122,14 +124,16 @@ function App() {
                        viewport={{ once: true, amount: 0.8 }}
                 position={'relative'}
                     >
-            <Flex display={{ md: 'flex' }} w={['100%']}  borderRadius={25}
+            <Flex
+                display={{ md: 'flex' }}
+                  w={['100%']}  borderRadius={25}
         position={'relative'}
 
             >
                 <Box flexShrink={0}
                     zIndex={1}
                      position={'relative'}
-                     ml={['30%', '30%', 0]}
+                     ml={['35%', '35%', 0]}
                      marginBottom={[5, 5, 0]}
                 >
                 <Image
@@ -152,12 +156,14 @@ function App() {
                     top={'0px'}
                     left={'0px'}
                     zIndex={0}
-                    ml={['30%', '30%', 0]}
+                    ml={['35%', '35%', 0]}
                     _dark={{bgGradient: 'linear(to-l, #3a6186, #89253e)'}}
                 />
 
                 <Spacer/>
-                <Box marginLeft={10}
+                <VStack width={'100%'}>
+                <Box marginLeft={[0,10]}
+                     position={'relative'}
                     _hover={{ bg: 'gray.50', transition: "background-color 0.2s" }}
                      padding={5}
                      borderRadius={20}
@@ -172,11 +178,37 @@ function App() {
                     </Text>
                 </Box>
 
+
+                </VStack>
+
             </Flex>
+                        <VStack mt={5}>
+                        <Text
+                            flexShrink={0}
+                            fontFamily={'fontSans'}
+                            fontSize={['s','md']}
+                        >Developing in:</Text>
+                        <HStack>
+                            <Badge
+                                bg={'blue.100'}
+                                _dark={{bg: 'blue.900'}}
+
+                            >JavaScript</Badge>
+                            <Badge bg={'blue.100'}
+                                   _dark={{bg: 'blue.900'}}>HTML/CSS</Badge>
+                            <Badge bg={'blue.100'}
+                                   _dark={{bg: 'blue.900'}}>React</Badge>
+                            <Badge bg={'blue.100'}
+                                   _dark={{bg: 'blue.900'}}>Python</Badge>
+                            <Badge bg={'blue.100'}
+                                   _dark={{bg: 'blue.900'}}>Java</Badge>
+                        </HStack>
+                        </VStack>
             </ScaleFade>}
             </TrackVisibility>
 
         </VStack>
+            <ScrollButton/>
         </Center>
     </ChakraProvider>
   );
