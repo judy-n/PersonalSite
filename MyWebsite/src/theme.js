@@ -6,5 +6,8 @@ const theme = extendTheme({
         fontMono: "Source Code Pro",
         fontSans: "DM Sans, sans-serif"
     },
+    config: {
+        useSystemColorMode: true
+    }
 })
 export default theme
