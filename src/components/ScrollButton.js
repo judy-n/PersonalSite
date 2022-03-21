@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {FaAngleUp} from 'react-icons/fa';
 import {Button} from '@chakra-ui/react';
-const ScrollButton = () =>{
+const ScrollButton = () => {
 
     const [visible, setVisible] = useState(false)
 
