@@ -70,15 +70,27 @@ function App() {
                     </Text>
                 </Box>
                 <HStack w={'100%'} mt={'5%'}>
+                    <Link
+                        target={'_blank'}
+                        href={'https://github.com/judy-n'}>
                     <Button>
                         <FaGithub/>
                     </Button>
+                    </Link>
+                    <Link
+                        target={'_blank'}
+                        href={'https://www.linkedin.com/in/judy-naamani/'}>
                     <Button>
                         <FaLinkedinIn/>
                     </Button>
+                    </Link>
+                    <Link
+                        target={'_blank'}
+                        href={'mailto:judy.naamani@mail.utoronto.ca'}>
                     <Button>
                         <FaRegEnvelope/>
                     </Button>
+                    </Link>
                 </HStack>
 
         </VStack>
