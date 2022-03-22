@@ -42,7 +42,6 @@ const NavLink = ({ children }) => (
 export default function Nav(props) {
     const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onOpen, onClose } = useDisclosure();
-    console.log("nav color mode", colorMode)
 
     useEffect(() => {
         props.updateColorMode(colorMode);

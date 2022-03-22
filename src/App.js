@@ -13,7 +13,7 @@ import {
     Icon, Image, Spacer,
     Badge,
     useColorMode,
-    useColorModeValue, Wrap, WrapItem, AspectRatio, Divider,
+    useColorModeValue, Wrap, WrapItem, AspectRatio, Divider, useMediaQuery,
 } from '@chakra-ui/react';
 
 import { CircleGrid, Circle } from 'react-awesome-shapes'
@@ -28,10 +28,10 @@ import Projects from "./pages/Projects";
 import {DiAndroid} from "react-icons/all";
 
 function App() {
+    const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
     const [shapeColor, setShapeColor] = useState('#8378e9')
     const updateColorMode = (colorMode) => {
         colorMode === 'light' ? setShapeColor('#8378e9') : setShapeColor('#80233b')
-        console.log('cm', colorMode);
     }
 
   return (
@@ -45,7 +45,8 @@ function App() {
               bgGradient='linear(to-l, #6CD4FF, #8B80F9)'
         _dark={{bgGradient: 'linear(to-l, #3a6186, #89253e)'}}>
             <Box w={['80%','60%','50%','40%']}>
-            <ScaleFade in={true} offsetY='40px' style={{ transitionDuration: '1s'}}
+            <ScaleFade
+                in={true} offsetY='40px' style={{ transitionDuration: '1s'}}
             >
 
             <VStack position={'relative'} zIndex={2} spacing={8} boxShadow='md' w={'100%'} borderRadius={25}
@@ -116,14 +117,16 @@ function App() {
             </Box>
 
         </Flex>
+            {isLargerThan1280 && (
+                <CircleGrid
+                    position="absolute"
+                    left="0px"
+                    color={shapeColor}
+                    size="200px"
+                    zIndex={0}
+                />
+            )}
 
-            <CircleGrid
-                position="absolute"
-                left="0px"
-                color={shapeColor}
-                size="200px"
-                zIndex={0}
-            />
         </Center>
 
         <Center id="about" >
