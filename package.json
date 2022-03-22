@@ -28,7 +28,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "echo 'your_cutom_domain.online' > ./build/CNAME && gh-pages -d build",
+    "deploy": "echo 'judyn.me' > ./build/CNAME && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
