@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.84e493b1.css","mappings":"AAAA,KACI,sBACJ,CAEA,WACI,8BACJ,CAEA,UACI,qCACJ","sources":["App.css"],"sourcesContent":["html {\n    scroll-behavior: smooth;\n}\n\n.font-text {\n    font-family: 'DM Sans', sans-serif;\n}\n\n.font-sub {\n    font-family: 'Source Code Pro', monospace;\n}\n"],"names":[],"sourceRoot":""}
