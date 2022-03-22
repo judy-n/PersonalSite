@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Badge, Box, Flex, Heading, HStack, Image, ScaleFade, Spacer, Text, VStack} from "@chakra-ui/react";
+import React from 'react';
+import {Badge, Box, Flex, HStack, Image, ScaleFade, Spacer, Text, VStack} from "@chakra-ui/react";
 import judy from "../img/judy2.png";
 import TrackVisibility from "react-on-screen";
 
@@ -34,6 +34,7 @@ function About() {
                             border={'none'}
                             zIndex={1}
                             position={'relative'}
+                            alt={""}
                         />
                     </Box>
 

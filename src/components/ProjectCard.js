@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Button, HStack, Image, Link, VStack} from "@chakra-ui/react";
 import {FaExternalLinkAlt, FaGithub} from "react-icons/fa";
 
@@ -21,6 +21,7 @@ function ProjectCard(props) {
                 w={['200px', '250px']}
                 borderRadius={15}
                 objectFit='cover'
+                alt={""}
             />
 
             <HStack paddingTop={2}>
