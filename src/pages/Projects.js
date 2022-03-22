@@ -74,13 +74,11 @@ function Projects() {
             >
 
                 <ProjectCard
-                    style={{marginLeft: '2rem'}}
                     img={linki}
                     link={'https://www.producthunt.com/posts/linki'}
                     github={'https://github.com/judy-n/linki'}
                 />
 
-                <Spacer m={'1rem'}/>
                 <ProjectDesc
                     title={'Linki'}
                     desc={'Linki is a cross-platform menu bar app that gives quick access to your recurring meeting links!'}
