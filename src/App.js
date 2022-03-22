@@ -13,7 +13,7 @@ import {
     Icon, Image, Spacer,
     Badge,
     useColorMode,
-    useColorModeValue, Wrap, WrapItem, AspectRatio,
+    useColorModeValue, Wrap, WrapItem, AspectRatio, Divider,
 } from '@chakra-ui/react';
 
 import { CircleGrid, Circle } from 'react-awesome-shapes'
@@ -25,6 +25,7 @@ import {FaGithub, FaLinkedinIn, FaRegEnvelope, FaAngleDown} from 'react-icons/fa
 import ScrollButton from "./components/ScrollButton";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import {DiAndroid} from "react-icons/all";
 
 function App() {
     const [shapeColor, setShapeColor] = useState('#8378e9')
@@ -111,8 +112,8 @@ function App() {
             />
         </Center>
 
-        <Center>
-        <VStack id="about"  spacing={10} marginY={'5rem'} width={['80%','70%','60%','50%']}>
+        <Center id="about" >
+        <VStack  spacing={10} marginY={'5rem'} width={['80%','70%','60%','50%']}>
 
             <Heading fontWeight={'medium'}>
                 About Me
@@ -123,7 +124,7 @@ function App() {
         </Center>
 
         <Center>
-            <VStack id="projects"  spacing={10} marginY={'5rem'} width={['80%','70%','60%','50%']}>
+            <VStack id="projects"  spacing={10} marginY={'5rem'} width={'70%'}>
                 <Heading fontWeight={'medium'}>
                     Projects
                 </Heading>
