@@ -1,3 +1,5 @@
 ## Personal Site 2.0
 
-In progress...
+Check it out [here](https://judyn.me)⚡️
+
+Made with React and Chakra UI
