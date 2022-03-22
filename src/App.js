@@ -57,12 +57,14 @@ function App() {
                     <Heading w={'100%'}
                              fontWeight={'medium'}
                             fontSize={['3xl', '4xl', '6xl']}
+                             className={'font-text'}
                     >
                         Hi, I'm Judy
                     </Heading>
                     <Text w={'100%'}
                           fontFamily={"fontMono"}
                           fontSize={['md', 'lg', 'xl']}
+                          className={'font-sub'}
                     >
                         I'm an aspiring web developer with an eye for design
                     </Text>
@@ -115,7 +117,8 @@ function App() {
         <Center id="about" >
         <VStack  spacing={10} marginY={'5rem'} width={['80%','70%','60%','50%']}>
 
-            <Heading fontWeight={'medium'}>
+            <Heading fontWeight={'medium'}
+                     className={'font-text'}>
                 About Me
             </Heading>
             <About/>
@@ -125,7 +128,8 @@ function App() {
 
         <Center>
             <VStack id="projects"  spacing={10} marginY={'5rem'} width={'70%'}>
-                <Heading fontWeight={'medium'}>
+                <Heading fontWeight={'medium'}
+                         className={'font-text'}>
                     Projects
                 </Heading>
                 <Projects/>
