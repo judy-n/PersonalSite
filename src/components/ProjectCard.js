@@ -25,14 +25,15 @@ function ProjectCard(props) {
             />
 
             <HStack paddingTop={2}>
-                <Link
+
+                {!props.noLink &&(<Link
                     target={'_blank'}
                     href={props.link}>
                 <Button
                     leftIcon={<FaExternalLinkAlt />}>
                     Link
                 </Button>
-                </Link>
+                </Link>)}
                 <Link
                     target={'_blank'}
                     href={props.github}>
