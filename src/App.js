@@ -6,18 +6,12 @@ import {
     Text,
     Link,
     VStack,
-    Code,
-    Grid,
     Flex, Heading,
     Center, HStack, Button,
-    Icon, Image, Spacer,
-    Badge,
-    useColorMode,
-    useColorModeValue, Wrap, WrapItem, AspectRatio, Divider, useMediaQuery,
+    useMediaQuery,
 } from '@chakra-ui/react';
 
-import { CircleGrid, Circle } from 'react-awesome-shapes'
-import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { CircleGrid } from 'react-awesome-shapes'
 import theme from './theme.js'
 import Nav from "./components/Nav";
 import { Fade, ScaleFade, Slide, SlideFade } from '@chakra-ui/react'
@@ -25,7 +19,7 @@ import {FaGithub, FaLinkedinIn, FaRegEnvelope, FaAngleDown} from 'react-icons/fa
 import ScrollButton from "./components/ScrollButton";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import {DiAndroid} from "react-icons/all";
+import Footer from "./components/Footer";
 
 function App() {
     const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
@@ -141,8 +135,8 @@ function App() {
             <ScrollButton/>
         </Center>
 
-        <Center>
-            <VStack id="projects"  spacing={10} marginY={'5rem'} width={'70%'}>
+        <Center id="projects">
+            <VStack   spacing={10} marginY={'5rem'} width={'70%'}>
                 <Heading fontWeight={'medium'}
                          className={'font-text'}>
                     Projects
@@ -150,7 +144,7 @@ function App() {
                 <Projects/>
             </VStack>
         </Center>
-
+        <Footer/>
     </ChakraProvider>
   );
 }

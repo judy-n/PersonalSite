@@ -7,12 +7,17 @@ const ScrollButton = () => {
 
     const toggleVisible = () => {
         const scrolled = document.documentElement.scrollTop;
-        if (scrolled > 300){
-            setVisible(true)
-        }
-        else if (scrolled <= 300){
+
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
             setVisible(false)
         }
+        else if (scrolled > 300){
+            setVisible(true)
+        }
+        else if (scrolled <= 300) {
+            setVisible(false)
+        }
+
     };
 
     const scrollToTop = () =>{
@@ -29,6 +34,7 @@ const ScrollButton = () => {
         <Button borderRadius={'50%'}
                 w={'3rem'}
                 h={'3rem'}
+                zIndex={20}
                 onClick={scrollToTop}
         style={{position: 'fixed',
             left:'50%',
