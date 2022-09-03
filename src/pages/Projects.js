@@ -1,16 +1,10 @@
 import {
     Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel,
-    AspectRatio, Badge, Box,
+    Box,
     Button,
     Center,
-    Divider, Flex,
-    Heading,
-    HStack,
-    Image, Link, Spacer,
-    Text,
-    VStack,
-    Wrap,
-    WrapItem
+    Flex,
+    Spacer,
 } from "@chakra-ui/react";
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
@@ -20,6 +14,7 @@ import waw from "../img/waw.png"
 import linki from "../img/linki3.jpg"
 import health from "../img/health.jpg"
 import money from "../img/ms.png"
+import tdt from "../img/tdt.png"
 
 function Projects() {
     return (
@@ -156,9 +151,31 @@ function Projects() {
                         >
 
                             <ProjectCard
+                                img={tdt}
+                                link={'https://todotrackerjs.herokuapp.com'}
+                                github={'https://github.com/judy-n/TodoTracker'}
+                            />
+
+                            <ProjectDesc
+                                title={'TodoTracker.js'}
+                                desc={'A JavaScript library that displays productivity over time. It consists of a to-do list and' +
+                                    ' a GitHub-like contribution graph.'}
+                                tags={['JavaScript','HTML', 'CSS']}
+                            />
+
+                        </Flex>
+                        <Flex
+                            mt={20}
+                            display={{ lg: 'flex', }}
+                            spacing={'3rem'}
+                            flexDir={'row-reverse'}
+                            alignItems={'flex-start'}
+                            _light={{bgColor: 'gray.50', padding: 5, borderRadius:20}}
+                        >
+
+                            <ProjectCard
                                 noLink
                                 img={money}
-                                link={'https://www.producthunt.com/posts/linki'}
                                 github={'https://github.com/judy-n/MoneySaver'}
                             />
 
