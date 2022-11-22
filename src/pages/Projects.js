@@ -152,7 +152,7 @@ function Projects() {
 
                             <ProjectCard
                                 img={tdt}
-                                link={'https://todotrackerjs.herokuapp.com'}
+                                link={'https://judy-n.github.io/TodoTracker/pub/examples.html'}
                                 github={'https://github.com/judy-n/TodoTracker'}
                             />
 
@@ -175,10 +175,11 @@ function Projects() {
 
                             <ProjectCard
                                 noLink
+                                style={{marginLeft: '2rem'}}
                                 img={money}
                                 github={'https://github.com/judy-n/MoneySaver'}
                             />
-
+                            <Spacer m={'1rem'}/>
                             <ProjectDesc
                                 title={'Money Saver'}
                                 desc={'An iOS/Android app made to help users limit their spending. It keeps track of savings on would-be purchases.'}
