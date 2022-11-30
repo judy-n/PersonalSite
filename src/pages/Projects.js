@@ -27,7 +27,7 @@ function Projects() {
         >
                 <ProjectCard
                     img={four}
-                    link={'https://www.fourquadrant.tech/'}
+                    link={'https://fourquadrant.net'}
                     github={'https://github.com/judy-n/FourQuadrant'}
                 />
                 <ProjectDesc
