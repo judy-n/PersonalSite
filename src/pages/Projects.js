@@ -15,6 +15,7 @@ import linki from "../img/linki3.jpg"
 import health from "../img/health.jpg"
 import money from "../img/ms.png"
 import tdt from "../img/tdt.png"
+import meow from "../img/mainmenu.png"
 
 function Projects() {
     return (
@@ -27,7 +28,7 @@ function Projects() {
         >
                 <ProjectCard
                     img={four}
-                    link={'https://fourquadrant.net'}
+                    link={'https://www.fourquadrant.xyz'}
                     github={'https://github.com/judy-n/FourQuadrant'}
                 />
                 <ProjectDesc
@@ -59,6 +60,7 @@ function Projects() {
             desc={'A web app that lets you view and share cool stats about your chat with someone. Stats include ' +
                 'message distribution, most used words/emojis and more.'}
             tags={['JavaScript','HTML/CSS', 'Node.js']}
+            highlight={'4000+ users, featured in 15+ articles'}
         />
 
     </Flex>
@@ -72,11 +74,36 @@ function Projects() {
             >
 
                 <ProjectCard
-                    img={linki}
-                    link={'https://www.producthunt.com/posts/linki'}
+                    img={meow}
+                    link={'https://lilvedaes.itch.io/meow-tunes'}
                     github={'https://github.com/judy-n/linki'}
                 />
 
+                <ProjectDesc
+                    title={'Meow Tunes'}
+                    desc={'A 3D rhythm-based platformer game about a cat who travels through different worlds, facing musically inspired challenges.'}
+                    tags={['C#','Unity']}
+                    highlight={"Honourable Mention for Technical Innovation at Level Up 2023"}
+                />
+
+            </Flex>
+
+            <Flex
+                mt={20}
+                display={{ lg: 'flex', }}
+                spacing={'3rem'}
+                alignItems={'flex-start'}
+                flexDir={'row-reverse'}
+                _light={{bgColor: 'gray.50', padding: 5, borderRadius:20}}
+            >
+
+                <ProjectCard
+                    img={linki}
+                    style={{marginLeft: '2rem'}}
+                    link={'https://www.producthunt.com/posts/linki'}
+                    github={'https://github.com/judy-n/linki'}
+                />
+                <Spacer m={'1rem'}/>
                 <ProjectDesc
                     title={'Linki'}
                     desc={'Linki is a cross-platform menu bar app that gives quick access to your recurring meeting links!'}
@@ -121,19 +148,16 @@ function Projects() {
                             mt={20}
                             display={{ lg: 'flex', }}
                             spacing={'3rem'}
-                            flexDir={'row-reverse'}
                             alignItems={'flex-start'}
                             _light={{bgColor: 'gray.50', padding: 5, borderRadius:20}}
                         >
 
                             <ProjectCard
-                                style={{marginLeft: '2rem'}}
                                 img={health}
                                 link={'https://teambch.herokuapp.com/'}
                                 github={'https://github.com/JLambertazzo/healthkit'}
                             />
 
-                            <Spacer m={'1rem'}/>
                             <ProjectDesc
                                 title={'Health Kit'}
                                 desc={"Health Kit is a form creation web app that my team started in collaboration with Boston Children's Hospital. The goal is to create a " +
@@ -147,15 +171,17 @@ function Projects() {
                             display={{ lg: 'flex', }}
                             spacing={'3rem'}
                             alignItems={'flex-start'}
+                            flexDir={'row-reverse'}
                             _light={{bgColor: 'gray.50', padding: 5, borderRadius:20}}
                         >
 
                             <ProjectCard
+                                style={{marginLeft: '2rem'}}
                                 img={tdt}
                                 link={'https://judy-n.github.io/TodoTracker/pub/examples.html'}
                                 github={'https://github.com/judy-n/TodoTracker'}
                             />
-
+                            <Spacer m={'1rem'}/>
                             <ProjectDesc
                                 title={'TodoTracker.js'}
                                 desc={'A JavaScript library that displays productivity over time. It consists of a to-do list and' +
@@ -168,18 +194,15 @@ function Projects() {
                             mt={20}
                             display={{ lg: 'flex', }}
                             spacing={'3rem'}
-                            flexDir={'row-reverse'}
                             alignItems={'flex-start'}
                             _light={{bgColor: 'gray.50', padding: 5, borderRadius:20}}
                         >
 
                             <ProjectCard
                                 noLink
-                                style={{marginLeft: '2rem'}}
                                 img={money}
                                 github={'https://github.com/judy-n/MoneySaver'}
                             />
-                            <Spacer m={'1rem'}/>
                             <ProjectDesc
                                 title={'Money Saver'}
                                 desc={'An iOS/Android app made to help users limit their spending. It keeps track of savings on would-be purchases.'}

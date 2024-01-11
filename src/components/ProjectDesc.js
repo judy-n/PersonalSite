@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {Badge, Box, Divider, Heading, HStack, Text} from "@chakra-ui/react";
+import {Badge, Box, Divider, Heading, HStack, Text, VStack} from "@chakra-ui/react";
+import {FaTrophy} from 'react-icons/fa'
 
 
 function ProjectDesc(props) {
@@ -20,6 +21,25 @@ function ProjectDesc(props) {
                 mb={'1rem'}>
                 {props.desc}
             </Text>
+            {props.highlight && (
+                <HStack
+                p={1}
+                width={'fit-content'}
+                mb={4}
+                borderRadius={10}
+                >
+                    <HStack p={1} px={2} bg={'#fff3b9'} borderRadius={10} color={"#a68f11"}>
+                    <FaTrophy />
+                        <Text
+                            fontSize={['md','lg']}
+                            fontFamily={'fontSans'}
+                            color={"#a68f11"}
+                            mb={'1rem'}>
+                            {props.highlight}
+                        </Text>
+                    </HStack>
+                </HStack>
+            )}
             <HStack mb={'2rem'}>
                 {props.tags.map((tag) => {
                     return (<Badge
@@ -28,14 +48,6 @@ function ProjectDesc(props) {
                     >{tag}</Badge>)
                     }
                 )}
-                {/*<Badge*/}
-                {/*    bg={'blue.100'}*/}
-                {/*    _dark={{bg: 'blue.900'}}*/}
-                {/*>JavaScript</Badge>*/}
-                {/*<Badge bg={'blue.100'}*/}
-                {/*       _dark={{bg: 'blue.900'}}>HTML/CSS</Badge>*/}
-                {/*<Badge bg={'blue.100'}*/}
-                {/*       _dark={{bg: 'blue.900'}}>Node.js</Badge>*/}
             </HStack>
 
         </Box>

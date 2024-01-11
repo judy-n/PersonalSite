@@ -1,6 +1,6 @@
 import React from 'react';
 import {Badge, Box, Flex, HStack, Image, ScaleFade, Spacer, Text, VStack} from "@chakra-ui/react";
-import judy from "../img/judy2.png";
+import judy from "../img/judy3.png";
 import TrackVisibility from "react-on-screen";
 
 function About() {
@@ -63,9 +63,13 @@ function About() {
                         >
                             <Text  fontFamily={'fontSans'}
                                    fontSize={['sm','md', 'lg', 'xl']} >
-                                Hey! I'm Judy Naamani, a 3rd year student at the University of Toronto specializing in Computer Science.
+                                Hey! I'm Judy Naamani, a 4th year student at the University of Toronto specializing in Computer Science with a focus in Human-Computer Interaction.
                                 <br/>
-                                I'm interested in web development and UI/UX, and some of my hobbies include graphic design and digital art.
+                                I'm expecting to graduate in June 2024 and am seeking software engineering roles either remote or on-site in Montréal, QC.
+                                <br/>
+                                I have over a year of experience working as a <b>Front End Developer</b> at <b>Procom</b>.
+                                <br/>
+                                I'm interested in web development, UI/UX, and game development, and some of my hobbies include photography and digital art.
                             </Text>
                         </Box>
 
@@ -86,6 +90,16 @@ function About() {
                             _dark={{bg: 'blue.900'}}
 
                         >JavaScript</Badge>
+                        <Badge
+                            bg={'blue.100'}
+                            _dark={{bg: 'blue.900'}}
+
+                        >TypeScript</Badge>
+                        <Badge
+                            bg={'blue.100'}
+                            _dark={{bg: 'blue.900'}}
+
+                        >C#</Badge>
                         <Badge bg={'blue.100'}
                                _dark={{bg: 'blue.900'}}>HTML/CSS</Badge>
                         <Badge bg={'blue.100'}

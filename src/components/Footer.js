@@ -14,7 +14,7 @@ function Footer() {
                 <Text
                     _dark={{color: 'white'}}
                 >
-                    © 2022 Judy Naamani
+                    © 2024 Judy Naamani
                 </Text>
             </Center>
         </Box>

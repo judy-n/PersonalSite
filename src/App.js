@@ -14,7 +14,7 @@ import {
 import { CircleGrid } from 'react-awesome-shapes'
 import theme from './theme.js'
 import Nav from "./components/Nav";
-import { Fade, ScaleFade, Slide, SlideFade } from '@chakra-ui/react'
+import { ScaleFade } from '@chakra-ui/react'
 import {FaGithub, FaLinkedinIn, FaRegEnvelope, FaAngleDown} from 'react-icons/fa';
 import ScrollButton from "./components/ScrollButton";
 import About from "./pages/About";
@@ -61,7 +61,7 @@ function App() {
                           fontSize={['md', 'lg', 'xl']}
                           className={'font-sub'}
                     >
-                        I'm an aspiring web developer with an eye for design
+                        I'm a web developer with an eye for design
                     </Text>
                 </Box>
                 <HStack w={'100%'} mt={'5%'}>
@@ -81,7 +81,7 @@ function App() {
                     </Link>
                     <Link
                         target={'_blank'}
-                        href={'mailto:judy.naamani@mail.utoronto.ca'}>
+                        href={'mailto:judynaamani@icloud.com'}>
                     <Button>
                         <FaRegEnvelope/>
                     </Button>
