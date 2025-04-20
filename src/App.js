@@ -61,7 +61,7 @@ function App() {
                           fontSize={['md', 'lg', 'xl']}
                           className={'font-sub'}
                     >
-                        I'm a web developer with an eye for design
+                        I'm a software engineer with an eye for design
                     </Text>
                 </Box>
                 <HStack w={'100%'} mt={'5%'}>

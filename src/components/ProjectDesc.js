@@ -28,12 +28,16 @@ function ProjectDesc(props) {
                 mb={4}
                 borderRadius={10}
                 >
-                    <HStack p={1} px={2} bg={'#fff3b9'} borderRadius={10} color={"#a68f11"}>
+                    <HStack borderRadius={10} color={"teal.600"}>
+                        <Box bg={'teal.100'} p={2} borderRadius={'50%'}>
                     <FaTrophy />
+                    </Box>
                         <Text
-                            fontSize={['md','lg']}
+                            fontSize={['xs','sm']}
                             fontFamily={'fontSans'}
-                            color={"#a68f11"}
+                            color={"teal.600"}
+                            _dark={{color: 'teal.100'}}
+                            fontWeight={'medium'}
                             mb={'1rem'}>
                             {props.highlight}
                         </Text>

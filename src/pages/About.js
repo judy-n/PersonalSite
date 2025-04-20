@@ -63,13 +63,10 @@ function About() {
                         >
                             <Text  fontFamily={'fontSans'}
                                    fontSize={['sm','md', 'lg', 'xl']} >
-                                Hey! I'm Judy Naamani, a 4th year student at the University of Toronto specializing in Computer Science with a focus in Human-Computer Interaction.
+                                Hey! I'm Judy Naamani, a Full Stack Developer at Procom with <Text as="span" fontWeight={'medium'}>2+</Text> years of experience. 
+                                I graduated from the University of Toronto in 2024 with a BSc in Computer Science. 
                                 <br/>
-                                I'm expecting to graduate in June 2024 and am seeking software engineering roles either remote or on-site in Montréal, QC.
-                                <br/>
-                                I have over a year of experience working as a <b>Front End Developer</b> at <b>Procom</b>.
-                                <br/>
-                                I'm interested in web development, UI/UX, and game development, and some of my hobbies include photography and digital art.
+                                I'm interested in <Text as="span" fontWeight={'medium'}>web development, UI/UX, and game development</Text>. 
                             </Text>
                         </Box>
 
